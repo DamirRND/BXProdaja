@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Prodaja</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="shortcut icon" type="image/png" href="../images/logo.png" />
+
+<script src="https://unpkg.com/feather-icons"></script>
+<link rel="stylesheet" type="text/css" href="../css/adminx.css"
+	media="screen" />
+</head>
+<body>
+	<div
+		class="adminx-container d-flex justify-content-center align-items-center">
+		<div class="page-login">
+			<div class="text-center">
+				<a class="navbar-brand mb-4 h1 aLogo" href="login.html"> <img
+					src="../images/logo.png"
+					class="navbar-brand-image d-inline-block align-top mr-2" alt="" />
+					Prodaja
+				</a>
+			</div>
+
+			<div class="card mb-0">
+				<div class="card-body">
+					<form id="forma" name="forma" action="#" th:action="@{/login}" th:object="${radnik}" method="post">
+						<div class="form-group">
+							<label for="username" class="form-label">Korisničko ime</label> <input
+								type="text" class="form-control" id="username"
+								placeholder="email@example.com" th:field="*{korIme}" />
+						</div>
+						<div class="form-group">
+							<label for="sifra" class="form-label">Lozinka</label> <input
+								type="password" class="form-control" id="sifra"
+								placeholder="Lozinka" th:field="*{korLozinka}" />
+						</div>
+						<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input"
+									id="customCheck1" /> <label class="custom-control-label"
+									for="customCheck1">Zapamti me</label>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-sm btn-block btn-primary">Uloguj
+							se</button>
+					</form>
+				</div>
+				<div class="card-footer text-center">
+					<a href="#"><small>Zaboravili ste šifru?</small></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="../js/vendor.js"></script>
+	<script src="../js/adminx.js"></script>
+
+	<script th:inline="javascript">
+		/*var flag = [[${radnikProvjera}]];
+		if(flag==null){
+			notifikacija("Ne postoji korisnik.",'danger');
+		}else{
+			notifikacija("Korisnik postoji.",'success');
+		}*/
+	
+	/*<![CDATA[*/
+		function notifikacija(text, stil){
+			const notifications = new window.notifications();
+			notifications.fire(text,
+				{
+					autoHide: false,
+					duration:5000,
+					style:stil,
+					position: 'top'
+				});
+		}
+		$("#forma").submit(function(e){
+			console.log(e);
+		});
+	
+	/*]]>*/
+	</script>
+</body>
+</html>
