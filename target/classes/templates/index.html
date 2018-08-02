@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Prodaja</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+  <link rel="stylesheet" type="text/css" href="./css/adminx.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="./fontawesome-free-5.2.0-web/css/all.min.css" media="screen" />
+  <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+
+</head>
+
+<body>
+  <div class="adminx-container">
+   	<nav th:replace="fragmenti/topBarNavigacijaFragment :: topBarNavigacija"></nav>
+	<div th:replace="fragmenti/sideMeniNavigacijaFragmenti :: sideMeniNavigacija"></div>
+	<div th:replace="fragmenti/nalogStavkaDataTablesFragment :: nalogStTabela"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="./dist/js/vendor.js"></script>
+  <script src="./fontawesome-free-5.2.0-web/js/all.min.js"></script>
+  <script src="./dist/js/adminx.js"></script>
+
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <script>
+  	/*<![CDATA[*/
+		  $(document).ready(function() {
+		      var table = $("#data-table").DataTable({
+		        "columns": [
+		          null,
+		          null,
+		          null,
+		          null,
+		          null,
+		          { "orderable": false }
+		        ]
+		      });
+	    });
+	/*]]>*/
+  
+  </script>
+
+</body>
+
+</html>

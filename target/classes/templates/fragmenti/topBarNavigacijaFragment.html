@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+	 <nav th:fragment="topBarNavigacija" class="navbar navbar-expand justify-content-between fixed-top">
+      <a class="navbar-brand mb-0 h1 d-none d-md-block aLogo" href="index.html">
+        <img src="./images/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt=""/> Prodaja
+      </a>
+
+      <div class="d-flex flex-1 d-block d-md-none">
+        <a href="#" class="sidebar-toggle ml-3">
+          <i data-feather="menu"></i>
+        </a>
+      </div>
+       	<script th:inline="javascript">
+		  	/*<![CDATA[*/
+				function izlogujSe() {
+					$.ajax({
+						method : "GET",
+						url : "/logout"
+					}).done(function(data){
+						if(data){
+							$.ajax({
+								method : "GET",
+								url : "/login"
+							}).done(function(){
+								location.href="/login";
+							});
+						}
+					});
+				}
+			/*]]>*/
+  		</script>
+
+      <ul class="navbar-nav d-flex justify-content-end mr-2">
+        <li class="nav-item dropdown">
+          <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
+            <img src="./images/profile-pic-300px.jpg" class="d-inline-block align-top" alt=""/>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" >Podešavanja</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-danger" th:onclick="'javascript:izlogujSe()'">Izloguj se</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    
+   
+    
+</body>
+</html>

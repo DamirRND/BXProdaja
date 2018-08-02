@@ -19,7 +19,7 @@ import com.bx.Model.Roba;
 public interface NalogStavkaRepository extends JpaRepository<NalogStavka, Integer>, JpaSpecificationExecutor{
 
 	List<NalogStavka> findAllByKupacIdAndKupacSifraExt(int id, int sifra);
-
+	List<NalogStavka> findAllByNalogId(Integer id);
 	
 	List<NalogStavka> findAllByKupac(Komitent k);
 	List<NalogStavka> findAllByKupacAndRoba(Komitent k, Roba r);

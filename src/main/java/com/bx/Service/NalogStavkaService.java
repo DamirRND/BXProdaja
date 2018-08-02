@@ -54,6 +54,10 @@ public class NalogStavkaService {
 		return nlgrep.findAllByNalog(n);
 	}
 	
+	public List<NalogStavka> findallByNalogId(Integer id){
+		return nlgrep.findAllByNalogId(id);
+	}
+	
 	public NalogStavka findOne(int id) {
 		return nlgrep.findOne(id);
 	}

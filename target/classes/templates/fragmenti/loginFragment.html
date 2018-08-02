@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+	<div th:fragment="loginForma"
+		class="adminx-container d-flex justify-content-center align-items-center">
+		<div class="page-login">
+			<div class="text-center">
+				<a class="navbar-brand mb-4 h1 aLogo" href="login.html"> <img
+					src="../images/logo.png"
+					class="navbar-brand-image d-inline-block align-top mr-2" alt="" />
+					Prodaja
+				</a>
+			</div>
+			<div class="card mb-0">
+				<div class="card-body">
+					<form id="forma" name="forma" action="#" th:action="@{/index}"
+						th:object="${radnik}" method="post" novalidate='true'>
+						<div class="form-group">
+							<label for="username" class="form-label">Korisničko ime</label> 
+							<input type="text" class="form-control" id="username" placeholder="email@example.com" th:field="*{korIme}" required='true'/>
+							<div class="invalid-feedback">Molimo Vas upišite Vaše korisničko ime.</div>
+						</div>
+						<div class="form-group">
+							<label for="sifra" class="form-label">Lozinka</label> 
+							<input type="password" class="form-control" id="sifra" placeholder="Lozinka" th:field="*{korLozinka}" required='true'/>
+							<div class="invalid-feedback">Ne možete se ulogovati bez validne šifre.</div>
+						</div>
+						<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input"
+									id="customCheck1" /> 
+								<label class="custom-control-label" for="customCheck1">Zapamti me</label>
+							</div>
+						</div>
+						<button type="submit" id="ulogujSe" class="btn btn-sm btn-block btn-primary">Uloguj se</button>
+					</form>
+				</div>
+				<div class="card-footer text-center">
+					<a href="#"><small>Zaboravili ste šifru?</small></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
