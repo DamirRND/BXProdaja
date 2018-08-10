@@ -1,68 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-</head>
-<body>
-	<div th:fragment="nalogStTabela" class="adminx-content">
-		<div class="adminx-main-content">
-			<div class="container-fluid">
-				<nav aria-label="breadcrumb" role="navigation">
-					<ol class="breadcrumb adminx-page-breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Početna</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Korespodentska
-							prodaja</li>
-					</ol>
-				</nav>
-
-				<div class="row">
-					<div class="col">
-						<div class="card mb-grid">
-							<div class="table-responsive-md">
-								<table
-									class="table table-actions table-striped table-hover mb-0"
-									id="data-table">
-									<thead>
-										<tr>
-											<th scope="col"><label
-												class="custom-control custom-checkbox m-0 p-0"> <input
-													type="checkbox"
-													class="custom-control-input table-select-all"/> <span
-													class="custom-control-indicator"></span>
-											</label></th>
-											<th scope="col">First Name</th>
-											<th scope="col">Last Name</th>
-											<th scope="col">Username</th>
-											<th scope="col">Roles</th>
-											<th scope="col">Actions</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th scope="row"><label
-												class="custom-control custom-checkbox m-0 p-0"> <input
-													type="checkbox"
-													class="custom-control-input table-select-row"/> <span
-													class="custom-control-indicator"></span>
-											</label></th>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-											<td><span class="badge badge-pill badge-danger">Inactive</span>
-											</td>
-											<td>
-												<button class="btn btn-sm btn-primary">Edit</button>
-												<button class="btn btn-sm btn-danger">Delete</button>
-											</td>
-										</tr>
-									</tbody>
+   <head>
+      <meta charset="utf-8" />
+   </head>
+   <body>
+      <div th:fragment="nalogStTabela" class="adminx-content ">
+         <div class="adminx-main-content adminx screen" >
+            <div class="container-fluid containerCustom" >
+             
+               <div class="row firstRow" >
+                  <div class="col-md-2 firstColumn" >
+                     <!--  Moj kod -->
+                     <div class="card mb-grid cardCustom" >
+                        <div
+                           class="card-header d-flex justify-content-between align-items-center">
+                           <div class="card-header-title">MASTER DATA</div>
+                           <nav class="card-header-actions">
+                             <!--  <a class="card-header-action" data-toggle="collapse"
+                                 href="#card1" aria-expanded="false" aria-controls="card1">
+                              <i data-feather="minus-circle"></i>
+                              </a> -->
+                           </nav>
+                        </div>
+                        <div class="card-body collapse show card1Custom" id="card1" >
+                           <form>
+                              <label class="form-label" for="exampleFormControlSelect1">Org. Jedinica</label>
+                              <select class="form-control" placehoid="exampleFormControlSelect1">
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                                 <option>5</option>
+                              </select>
+                              <label class="form-label" for="exampleFormControlSelect1">Veleprodaja</label>
+                              <select class="form-control" id="exampleFormControlSelect1">
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                                 <option>5</option>
+                              </select>
+                              <label class="form-label">Izaberite datum</label>
+                              <input class="form-control mb-2 date-default" type="date" placeholder="Pick date2"/>
+                              <input type="file" class="form-control mb-2 custom-file-input" id="customFile" style="opacity: 1"/>
+                              <button class="btn btn-primary mb-2 btnCustom" type="submit" ><span class="iconCustom" ><i class="fas fa-upload"></i></span>Sačuvaj nalog</button>
+                              <button class="btn btn-primary mb-2 btnCustom" type="submit" ><span class="iconCustom" ><i class="fas fa-play"></i></span>Automatska obrada</button>
+                              <button class="btn btn-danger mb-2 btnCustom" type="submit" ><span class="iconCustom" ><i class="fas fa-lock"></i></span>Zaključaj nalog</button>
+                              <button class="btn btn-danger mb-2 btnCustom" type="submit" ><span class="iconCustom" ><i class="fas fa-trash-alt"></i></span>Izbriši nalog</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <div class="row">
+                        <div class="col-md-9">
+                           <select class="form-control" placehoid="exampleFormControlSelect1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                           </select>
+                           <input type="text" class="form-control smallTextField" id="validationCustom012 " />           
+                           <input type="text" class="form-control largeTextField" id="validationCustom01 "   />
+                           <select class="form-control" placehoid="exampleFormControlSelect1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                           </select>
+                           <input type="text" class="form-control smallTextField" id="validationCustom012"  />           
+                           <input type="text" class="form-control largeTextField" id="validationCustom01 "   />
+                           </div>
+                          
+                       
+                     </div>
+                      <!-- Second row -->
+                           <div class="row rowPadding">
+                              <div class="col-md-12">
+                             <div class="row">
+                                <div class="col-md-3">
+                     		   	   <label class="form-label" for="validationCustom01">Cena</label>
+                       		       <input type="text" class="form-control" id="validationCustom01"   />
+                        		</div>
+		                        <div class="col-md-3">
+		                          <label class="form-label" for="validationCustom01">Količina</label>
+		                          <input type="text" class="form-control" id="validationCustom01"  />
+		                        </div>
+		                        <div class="col-md-3">
+		                          <label class="form-label" for="validationCustom01">Vrijednost</label>
+		                          <input type="text" class="form-control" id="validationCustom01"  />
+		                        </div>
+		                        
+		                         <!--  Dodavanje  -->
+                              
+                               <div class="col-md-3" style="padding:0px;margin: 0px;">
+                                 <button class="btn btn-primary mb-2 btnSide" type="submit" ><span class="iconCustom" ><i class="fas fa-upload"></i></span>Ažuriraj stavku</button>
+                                 <button class="btn btn-success mb-2 btnSide" type="submit" ><span class="iconCustom" ><i class="fas fa-plus"></i></span>Dodaj novu stavku</button>
+                              </div>
+                              </div>
+                              
+                             
+                              
+                              </div>
+                              
+                              <!--  
+                              <div class="col-md-3">
+                                 <button class="btn btn-primary mb-2" type="submit" style="width:100%;text-align:left"><span style="margin-right:5px"><i class="fas fa-upload"></i></span>Ažuriraj stavku</button>
+                                 <button class="btn btn-success mb-2" type="submit" style="width:100%;text-align:left"><span style="margin-right:5px"><i class="fas fa-plus"></i></span>Dodaj novu stavku</button>
+                              </div>
+                              -->
+                           </div>
+                           
+                           <!--  end row -->
+                     <div class="col-md-12">
+                        <div class="row">
+                           <div class="card mb-grid cardGrid" >
+                              <div class="table-responsive-md">
+                                 <div class="table-responsive-md">
+								<table id="data-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
 								</table>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+   </body>
 </html>

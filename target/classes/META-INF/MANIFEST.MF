@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: BXProdaja
 Implementation-Version: 1.0.0-BETA
-Built-By: Damir
+Built-By: Radenko
 Implementation-Vendor-Id: com.bx
-Build-Jdk: 1.8.0_181
+Build-Jdk: 1.8.0_151
 Implementation-URL: http://projects.spring.io/spring-boot/BXProdaja/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.

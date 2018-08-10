@@ -1,0 +1,73 @@
+.adminx
+{
+	padding:0px;
+	height:100% !important;
+}
+.containerCustom
+{
+	height: 100% !important;
+}
+.firstRow
+{
+	height:100% !important;
+}
+.firstColumn
+{
+	padding-left: 0px;
+	padding-right:0px;
+}
+.cardCustom
+{
+	height:100% !important;
+	margin-bottom:-30px !important;
+	
+}
+.card1Custom
+{
+	padding:5px !important;
+}
+.btnCustom
+{
+	width:100%;
+	text-align:left;
+}
+.iconCustom
+{
+	margin-right:5px;
+}
+.smallTextField
+{
+	display:inline !important;
+	width:28% !important;
+	margin-right:2% !important;
+	
+}
+.largeTextField
+{
+	display:inline !important;
+	width:70% !important;
+	margin:-5px !important;
+}
+.btnSide
+{
+	width:100%;
+	text-align:left;
+}
+.cardGrid
+{
+	width:100%;
+}
+.screen
+{
+	height:100% !important;
+}
+
+@media screen and (min-height: 900px) {
+  .bigScreen {
+    height:100% !important;
+  }
+}
+.rowPadding
+{
+	padding-right:15px;
+}

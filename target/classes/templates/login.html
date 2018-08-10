@@ -39,7 +39,7 @@
 	              if (form.checkValidity() === false) {
 	            	$.ajax({
 	      				method : "GET",
-	      				url : "/provjeriSesiju"
+	      				url : "/loginController/provjeriSesiju"
 	      			}).done(function(data) {
 	      				console.log(data);
 	      			});

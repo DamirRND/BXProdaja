@@ -16,6 +16,7 @@ import com.bx.Model.Radnik;
 import com.bx.Service.RadnikService;
 
 @Controller
+@RequestMapping(value="/loginController")
 public class LoginController {
 
 	private final RadnikService rs;
